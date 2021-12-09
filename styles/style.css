@@ -1,18 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-ul {
-  padding-left: 0;
-}
-
-li {
- list-style-type: none;
-}
-
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -21,11 +6,10 @@ li {
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .header {
-  /* border: 2px solid red; */
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
@@ -33,7 +17,6 @@ li {
   display: flex;
   align-items: center;
   background-color: #f2f2f2;
-
   /* выше установили ограничения для секции */
 }
 
@@ -57,7 +40,6 @@ li {
   line-height: 96px;
   font-weight: bold;
   margin-left: 64px;
-  
 }
 
 .header__subtitle {
@@ -99,13 +81,12 @@ li {
   top: 64px;
 }
 
-
 .two-columns {
   display: flex;
   justify-content: space-between;
 
   width: 80%;
-  margin: 100px auto;
+  margin: 100px auto 70px;
 }
 
 .two-columns__brief {
@@ -127,7 +108,7 @@ li {
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
-  margin: 30px 0; 
+  margin: 30px 0;
 }
 
 .two-columns__span-accent {
@@ -173,7 +154,7 @@ li {
   width: 250px;
   margin-top: 60px;
 }
- 
+
 .table__headeing {
   font-size: 24px;
   line-height: 1.15;
@@ -186,14 +167,13 @@ li {
   font-weight: normal;
 }
 
-.table__text_undertext {    /*в брифе про отступ "Всмеирного Банка" не было никакой информации и как его сделать*/
-  margin-top: 20px;              /*я не знал чем сделать, чтоб вызвало меньше вопросов: <br> или отдельный класс*/
-  font-size: 18px;                                       /*но классу хотя б контролируемый отступ можно задать*/
+.table__text_undertext {
+  /*в брифе про отступ "Всмеирного Банка" не было никакой информации и как его сделать*/
+  margin-top: 20px; /*я не знал чем сделать, чтоб вызвало меньше вопросов: <br> или отдельный класс*/
+  font-size: 18px; /*но классу хотя б контролируемый отступ можно задать*/
   line-height: 1.2;
   font-weight: normal;
 }
-
-
 
 .feynman {
   height: 890px;
@@ -232,7 +212,7 @@ li {
   line-height: 51px;
   font-weight: normal;
   text-align: center;
-  
+
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -253,9 +233,8 @@ li {
   z-index: 1;
 }
 
-
-.kaufman{
-  background-color:  #1f1f1f;
+.kaufman {
+  background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
   padding: 100px 0;
@@ -277,10 +256,14 @@ li {
 .section-title_theme_dark {
   color: white;
   padding: 0 0 20px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -294,11 +277,12 @@ li {
   z-index: 1;
 }
 
-
 .footer {
-  background-color:  #1f1f1f;
+  box-sizing: border-box;
+  background-color: #1f1f1f;
   min-height: 350px;
   padding: 60px 0 40px;
+  display: flex;
 }
 
 .footer__columns {
@@ -339,6 +323,15 @@ li {
   margin: 0 0;
 }
 
+.footer__unordered-list {
+  padding: 0;
+  margin: 0;
+}
+
+.footer__list-item {
+  list-style-type: none;
+}
+
 .footer__column-link {
   font-size: 18px;
   line-height: 30px;
@@ -352,4 +345,3 @@ li {
   height: 16px;
   margin-right: 10px;
 }
-
