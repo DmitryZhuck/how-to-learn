@@ -39,7 +39,11 @@
   font-size: 102px;
   line-height: 96px;
   font-weight: bold;
-  margin-left: 64px;
+
+  position: relative;
+  margin: 0;
+  left: 64px;
+  z-index: 2;
 }
 
 .header__subtitle {
@@ -47,8 +51,10 @@
   font-size: 18px;
   line-height: 25px;
   font-weight: normal;
+
   position: absolute;
-  bottom: 0;
+  margin: 0;
+  bottom: 30px;
   left: 64px;
 }
 
@@ -57,7 +63,7 @@
   text-decoration: none;
 }
 
-.header__main_illustration {
+.header__main-illustration {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -86,11 +92,12 @@
   justify-content: space-between;
 
   width: 80%;
-  margin: 100px auto 70px;
+  margin: 100px auto 0;
 }
 
 .two-columns__brief {
   width: 175px;
+  margin: 0;
 
   font-size: 18px;
   line-height: 1.2;
@@ -102,6 +109,14 @@
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
+}
+
+.two-columns__main-text p:first-child {
+  margin-top: 0;
+}
+
+.two-columns__main-text p:last-child {
+  margin-bottom: 0;
 }
 
 .two-columns__paragraph {
@@ -132,7 +147,7 @@
 }
 
 .section-subtitle {
-  margin: 0 auto 60px;
+  margin: 0 auto;
   width: 60%;
 
   font-size: 24px;
@@ -150,12 +165,17 @@
   flex-wrap: wrap;
 }
 
+.table p:nth-child(3) {
+  margin: 0;
+}
+
 .table__cell {
   width: 250px;
   margin-top: 60px;
 }
 
 .table__headeing {
+  margin: 0;
   font-size: 24px;
   line-height: 1.15;
   font-weight: bold;
@@ -165,18 +185,11 @@
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
-}
-
-.table__text_undertext {
-  /*в брифе про отступ "Всмеирного Банка" не было никакой информации и как его сделать*/
-  margin-top: 20px; /*я не знал чем сделать, чтоб вызвало меньше вопросов: <br> или отдельный класс*/
-  font-size: 18px; /*но классу хотя б контролируемый отступ можно задать*/
-  line-height: 1.2;
-  font-weight: normal;
+  margin: 20px 0;
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   position: relative;
 }
@@ -237,7 +250,7 @@
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 90px 0;
 }
 
 .kaufman__triangle {
@@ -255,7 +268,6 @@
 
 .section-title_theme_dark {
   color: white;
-  padding: 0 0 20px 0;
   position: relative;
   z-index: 1;
 }
@@ -292,7 +304,7 @@
   justify-content: space-between;
 }
 
-.footer__columns_content_copyright {
+.footer__columns_content-copyright {
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
@@ -312,6 +324,7 @@
   color: white;
 
   padding: 18px 0;
+  margin: 0;
 }
 
 .footer__column-heading {
@@ -340,7 +353,7 @@
   text-decoration: none;
 }
 
-.footer__social_icon {
+.footer__social-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
